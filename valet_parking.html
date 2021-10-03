@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Valet Parking</title>
+    <script async src="button.js"></script>
+  </head>
+  <body>
+    <!-- Side navigation-->
+    <div class="sidenav">
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+    </div>
+    <!--Top navigation-->
+    <div class="topnav">
+      <a>Valet Parking</a>
+    </div>
+    <!-- main class/body/content-->
+    <div class="main">
+      <!-- second navigation ie., dashboard,check-in, search tab and check-in pop page-->
+      <div class="second-nav">
+        <a style="margin-right:120px;font-weight:bold;">Dashboard</a>
+        <form style="">
+          <input class="searchbox" type="text" name="search" placeholder="Search by vehicle number">
+        </form>
+        <button id="checkin" class="submit-button" style="vertical-align:right;float:right;" onclick="openform_checkin()"><span>Check-In </span></button>
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Vehicle Check-in</h3>
+            <div class="grid-container">
+              <div class="grid-item">vehicle number</div>
+              <div class="grid-item">vehicle type</div>
+              <div class="grid-item"><input class="inside-searchbox" type="text" id="inputField"  placeholder="Enter vehicle number"/></div>
+              <div class="grid-item"><input class="inside-searchbox" type="text" id="inputField"  placeholder="enter vehicle type"/></div>
+            </div>
+            <div class="grid-container">
+              <div class="grid-item">vehicle Model</div>
+              <div class="grid-item">Phone number</div>
+              <div class="grid-item"><input class="inside-searchbox" type="text" id="inputField"  placeholder="enter vehicle model"/></div>
+              <div class="grid-item"><input class="inside-searchbox" type="text" id="inputField"  placeholder="enter phone number"/></div>
+            </div>
+            <div class="grid-container">
+              <div class="grid-item">Customer Name</div>
+              <div class="grid-item"></div>
+              <div class="grid-item"><input class="inside-searchbox" type="text" id="inputField" placeholder="enter customer's name"></div>
+              <div class="grid-item"></div>
+            </div>
+            <div class="grid-container">
+              <div class="grid-item"></div>
+              <div class="grid-item">
+                <button id="" class="submit-button" style="vertical-align:right;float:right;" onclick="closeform()">
+                  <span>Check-In </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ----------------------------------------------------------------------- -->
+      <!-- table of entries ie, vehicle details -->
+      <table>
+          <tr class="tr1">
+            <th>Vehicle Number</th>
+            <th>Vehicle Model</th>
+            <th>Vehicle Type</th>
+            <th>Phone</th>
+            <th>Check-in</th>
+            <th>Actions</th>
+          </tr>
+          <tr class="tr1">
+            <td>TN 09 CD 2721</td>
+            <td>Audi 26</td>
+            <td class="wheeler">4 wheeler</td>
+            <td>9444306044</td>
+            <td>04-08-2021 6:05AM</td>
+            <td id="checkout" class="checkout" onclick="openform_checkout()">Check-out</td>
+          </tr>
+          <tr class="tr1">
+            <td>TN 09 CD 2722</td>
+            <td>Audi 26</td>
+            <td class="wheeler">4 wheeler</td>
+            <td>9444306045</td>
+            <td>04-08-2021 6:05AM</td>
+            <td id="checkout" class="checkout" onclick="openform_checkout()">Check-out</td>
+          </tr>
+          <tr class="tr1">
+            <td>TN 09 CD 2723</td>
+            <td>Audi 26</td>
+            <td class="wheeler">4 wheeler</td>
+            <td>9444306046</td>
+            <td>04-08-2021 6:05AM</td>
+            <td id="checkout" class="checkout" onclick="openform_checkout()">Check-out</td>
+          </tr>
+          <tr class="tr1">
+            <td>TN 09 CD 2724</td>
+            <td>Audi 26</td>
+            <td class="wheeler">4 wheeler</td>
+            <td>9444306047</td>
+            <td>04-08-2021 6:05AM</td>
+            <td id="checkout" class="checkout" onclick="openform_checkout()">Check-out</td>
+          </tr>
+          <tr class="tr1">
+            <td>TN 09 CD 2725</td>
+            <td>Audi 26</td>
+            <td class="wheeler">4 wheeler</td>
+            <td>9444306048</td>
+            <td>04-08-2021 6:05AM</td>
+            <td id="checkout" class="checkout" onclick="openform_checkout()">Check-out</td>
+          </tr>
+          <tr class="tr1">
+            <td>TN 09 CD 2726</td>
+            <td>Audi 26</td>
+            <td class="wheeler">4 wheeler</td>
+            <td>9444306049</td>
+            <td>04-08-2021 6:05AM</td>
+            <td id="checkout" class="checkout" onclick="openform_checkout()">Check-out</td>
+          </tr>
+          <tr class="tr1">
+            <td>TN 09 CD 2727</td>
+            <td>Audi 26</td>
+            <td class="wheeler">4 wheeler</td>
+            <td>9444306050</td>
+            <td>04-08-2021 6:05AM</td>
+            <td id="checkout" class="checkout" onclick="openform_checkout()">Check-out</td>
+          </tr>
+          
+      </table>
+      <div id="checkoutmodal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content" style="padding:20px 50px;">
+          <span class="close">&times;</span>
+          <h4>Check-out</h4>
+          <table class="table1">
+            <tr>
+              <th class="th1">Customer Name</th>
+              <th class="th1">phone Number</th>
+              <th class="th1">Vehicle number</th>
+              <th class="th1">Vehicle type</th>
+            </tr>
+            <tr>
+              <td class="td1">asd</td>
+              <td class="td1">9444306044</td>
+              <td class="td1">TN 09 CD 2721</td>
+              <td class="wheeler" style="align:center;">4 wheeler</td>
+            </tr>
+            <tr>
+              <th class="th1">vehicle Model</th>
+              <th class="th1">checkin time</th>
+              <th class="th1">checkout time</th>
+              <th class="th1">duration</th>
+            </tr>
+            <tr>
+              <td class="td1">Audi 26</td>
+              <td class="td1">04-08-2021 6:05AM</td>
+              <td class="td1">04-08-2021 8:05AM</td>
+              <td class="td1">2 hours</td>
+            </tr>
+          </table>
+          <table>
+            <tr><th class="money1"><p style="text-align:center;margin:auto;">To Pay<br>Rs.80</p></th></tr>
+            <tr><th><button class="proceed" onclick="payment_status()"><span>Proceed</span></button></th></tr>
+          </table>
+          <div class="">
+            <!-- <button class="proceed" onclick="payment_status()"> Proceed</button> -->
+            <div id="status" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content" style="width:28%;">
+                <!--<h3>Payment Succesful</h3>-->
+                <div class="card" >
+                  <span class="close">&times;</span>
+                  <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+                    <i class="checkmark" style="margin:0 auto;align:center;">✓</i>
+                  </div>
+                  <h1>Payment Successful</h1>
+                  <p>Your car will reach our doorstep within next 5 minutes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="js/button.js"></script>
+
+  </body>
+</html>
